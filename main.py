@@ -29,6 +29,11 @@ def send_web_push(subscription_information, message_body):
 def index():
     return render_template('index.html')
 
+@app.route("/send")
+def send():
+    return render_template('send.html')
+
+
 @app.route("/subscription/", methods=["GET", "POST"])
 def subscription():
     """
